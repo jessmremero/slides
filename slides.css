@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  body{
+  position:relative;
+
+  
+  }
+  .slides{
+    height:300px; 
+    width:500px;
+    overflow:hidden;
+    margin:auto; 
+    
+  }
+    
+  .view{
+    height:100%;
+    display:flex;
+    background:green;
+    overflow:visible;
+    transition:transform 1s;
+  }
+  
+  .slide{
+    height:100%;
+    width:100%;
+    background:red; 
+    flex-shrink:0;/*不压缩撑大父元素*/
+    border:1px solid black;
+   
+  }
+  /*使用者写的代码*/
+  .slide{
+   display:flex;
+    justify-content:center;
+    align-items:center;  
+  }
+  .slides{
+    position:relative;
+  }
+  .slides > .controls{
+    position:absolute;
+    bottom:10px;
+    left:30px;
+  }
+  .slide:nth-child{
+    background:#ddd;
+  }
+  .slide:nth-child(2){
+    background:#aaa;
+  }
+  .slide:nth-child(3){
+    background:#ccc;
+  }
+  
+         
